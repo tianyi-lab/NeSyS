@@ -1,0 +1,14 @@
+{
+  "total_accuracy": 0.850967007963595,
+  "total_correct": 748,
+  "total_questions": 879,
+  "dataset_accuracies": [
+    0.850967007963595
+  ],
+  "dataset_paths": [
+    "transition_mcq/transition_mcq_test.jsonl"
+  ],
+  "topic_totals": {},
+  "topic_corrects": {},
+  "topic_accuracy": {}
+}

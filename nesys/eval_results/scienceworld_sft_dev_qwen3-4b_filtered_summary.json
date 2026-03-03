@@ -1,0 +1,38 @@
+{
+  "total_accuracy": 0.6941649899396378,
+  "total_correct": 345,
+  "total_questions": 497,
+  "dataset_accuracies": [
+    0.6941649899396378
+  ],
+  "dataset_paths": [
+    "transition_mcq/dev.jsonl"
+  ],
+  "topic_totals": {
+    "Matter": 56,
+    "Chemistry": 51,
+    "Classification": 79,
+    "Biology": 148,
+    "Forces": 43,
+    "Measurement": 60,
+    "Electricity": 60
+  },
+  "topic_corrects": {
+    "Matter": 24,
+    "Chemistry": 39,
+    "Classification": 67,
+    "Biology": 91,
+    "Forces": 41,
+    "Measurement": 40,
+    "Electricity": 43
+  },
+  "topic_accuracy": {
+    "Matter": 0.42857142857142855,
+    "Chemistry": 0.7647058823529411,
+    "Classification": 0.8481012658227848,
+    "Biology": 0.6148648648648649,
+    "Forces": 0.9534883720930233,
+    "Measurement": 0.6666666666666666,
+    "Electricity": 0.7166666666666667
+  }
+}

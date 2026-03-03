@@ -1,0 +1,14 @@
+{
+  "total_accuracy": 0.4592476489028213,
+  "total_correct": 293,
+  "total_questions": 638,
+  "dataset_accuracies": [
+    0.4592476489028213
+  ],
+  "dataset_paths": [
+    "webshop_transition_qa/dev.jsonl"
+  ],
+  "topic_totals": {},
+  "topic_corrects": {},
+  "topic_accuracy": {}
+}

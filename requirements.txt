@@ -1,0 +1,15 @@
+huggingface_hub
+datasets
+nltk
+numpy
+openai
+scikit-learn
+sentence-transformers
+tqdm
+umap-learn
+
+# Neural evaluation dependencies (GPU recommended)
+torch
+transformers
+peft
+
