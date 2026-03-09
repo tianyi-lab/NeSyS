@@ -10,19 +10,54 @@ Large language models exhibit strong general-purpose reasoning capabilities, yet
 
 ## Results
 
-| Backbone / Method | ScienceWorld | Webshop | Plancraft |
-| :--- | :---: | :---: | :---: |
-| **Strong Baseline** | | | |
-| GPT-5-mini | 55.4 | 81.4 | 73.8 |
-| **Llama3.2-1B** | | | |
-| SFT (100% data) | 64.4 | 47.5 | 80.5 |
-| **NeSyS** (Reduced data) | **68.3** *(45%)* | **92.2** *(60%)* | **87.7** *(35%)* |
-| **Qwen3-4B** | | | |
-| SFT (100% data) | 68.3 | 47.3 | **90.1** |
-| **NeSyS** (Reduced data) | **71.0** *(45%)* | **92.6** *(60%)* | 88.4 *(35%)* |
+<table>
+  <thead>
+    <tr>
+      <th align="left">Backbone</th>
+      <th align="left">Method</th>
+      <th align="center">ScienceWorld</th>
+      <th align="center">Webshop</th>
+      <th align="center">Plancraft</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Strong Baseline</strong></td>
+      <td>GPT-5-mini</td>
+      <td align="center">55.4</td>
+      <td align="center">81.4</td>
+      <td align="center">73.8</td>
+    </tr>
+    <tr>
+      <td rowspan="2"><strong>Llama3.2-1B</strong></td>
+      <td>SFT (100% data)</td>
+      <td align="center">64.4</td>
+      <td align="center">47.5</td>
+      <td align="center">80.5</td>
+    </tr>
+    <tr>
+      <td><strong>Ours</strong> (Reduced data)</td>
+      <td align="center"><strong>68.3</strong> <br><em>(45%)</em></td>
+      <td align="center"><strong>92.2</strong> <br><em>(60%)</em></td>
+      <td align="center"><strong>87.7</strong> <br><em>(35%)</em></td>
+    </tr>
+    <tr>
+      <td rowspan="2"><strong>Qwen3-4B</strong></td>
+      <td>SFT (100% data)</td>
+      <td align="center">68.3</td>
+      <td align="center">47.3</td>
+      <td align="center"><strong>90.1</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Ours</strong> (Reduced data)</td>
+      <td align="center"><strong>71.0</strong> <br><em>(45%)</em></td>
+      <td align="center"><strong>92.6</strong> <br><em>(60%)</em></td>
+      <td align="center">88.4 <br><em>(35%)</em></td>
+    </tr>
+  </tbody>
+</table>
 
-*Note: Bold numbers highlight the best performance for each backbone model. Percentages in parentheses indicate the fraction of data used by our method.*
-
+<em>Note: Percentages in parentheses indicate the fraction of data used by our method.</em>
 ## Overview
 
 ```
