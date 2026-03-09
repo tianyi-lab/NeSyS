@@ -8,6 +8,21 @@ This is the official code and data release for the paper:
 
 Large language models exhibit strong general-purpose reasoning capabilities, yet they frequently hallucinate when used as world models. NeSyS bridges this gap by integrating the probabilistic semantic priors of LLMs with executable symbolic rules. The symbolic world model directly constrains the LLM by modifying its output probability distribution, and the neural world model is fine-tuned only on transitions not covered by symbolic rules -- reducing training data by 50% without loss of accuracy.
 
+## Results
+
+| Backbone / Method | ScienceWorld | Webshop | Plancraft |
+| :--- | :---: | :---: | :---: |
+| **Strong Baseline** | | | |
+| GPT-5-mini | 55.4 | 81.4 | 73.8 |
+| **Llama3.2-1B** | | | |
+| SFT (100% data) | 64.4 | 47.5 | 80.5 |
+| **NeSyS** (Reduced data) | **68.3** *(45%)* | **92.2** *(60%)* | **87.7** *(35%)* |
+| **Qwen3-4B** | | | |
+| SFT (100% data) | 68.3 | 47.3 | **90.1** |
+| **NeSyS** (Reduced data) | **71.0** *(45%)* | **92.6** *(60%)* | 88.4 *(35%)* |
+
+*Note: Bold numbers highlight the best performance for each backbone model. Percentages in parentheses indicate the fraction of data used by our method.*
+
 ## Overview
 
 ```
