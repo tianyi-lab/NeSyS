@@ -1,0 +1,6 @@
+__pycache__/
+*.py[cod]
+*.log
+webshop/
+nesys/.adapter_compat_cache/
+nesys/eval_results_experiments/

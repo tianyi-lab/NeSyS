@@ -1,6 +1,6 @@
 # NeSyS: Neuro-Symbolic Synergy for Interactive World Modeling
 
-This is the official code and data release for the paper:
+This is the official code and data release for our paper, **accepted at COLM 2026**:
 
 > **Neuro-Symbolic Synergy for Interactive World Modeling**
 > Hongyu Zhao, Siyu Zhou, Haolin Yang, Zengyi Qin, Tianyi Zhou
@@ -66,7 +66,9 @@ nesys/
   eval_results/         # Pre-computed neural evaluation logs (logprobs + predictions)
   final_rules/          # Final symbolic rule files used in the paper
   create_transition_mcq_rules.py   # Rule evaluation / creation tool
-  eval_transition_mcq_logprob.py   # Neural MCQ evaluator 
+  eval_transition_mcq_logprob.py   # Neural MCQ evaluator
+  eval_webshop_agent.py            # Open-ended WebShop agent evaluator
+  experiments/                     # Paper agent-evaluation launch scripts
   replicate_our_main_results.sh    # Reproduce NeSyS re-ranking results
   generate_eval_summaries.sh  # Regenerate eval logs
   example_evaluation_script.sh     # Quick-start example
@@ -140,14 +142,39 @@ cd nesys
 bash generate_eval_summaries.sh
 ```
 
+## Reproduce the Open-Ended WebShop Evaluation
+
+The camera-ready paper reports the
+[`Jianwen/Webshop-7B-SFT`](https://huggingface.co/Jianwen/Webshop-7B-SFT)
+baseline and the same agent advised by NeSyS one-step lookahead. First clone
+and install the original WebShop environment:
+
+```bash
+git clone https://github.com/princeton-nlp/WebShop.git webshop
+# Follow webshop/README.md to install its data and dependencies.
+```
+
+Then run the two paper settings:
+
+```bash
+cd nesys
+bash experiments/track_a0_webshop_baseline.sh
+bash experiments/track_a2_webshop_wm_rerank.sh
+```
+
+Both default to sessions 0--99, a 15-step cap, and seed 0. The acting
+checkpoint was released with [SkillRL](https://arxiv.org/abs/2602.08234).
+See [`nesys/experiments/README.md`](nesys/experiments/README.md) for the exact
+lookahead settings, output locations, and configuration overrides.
+
 ## Citation
 If you find our work useful in your research or applications, please consider citing the following paper and starring this repository.
 
 ```bibtex
-@article{zhao2026nesys,
+@inproceedings{zhao2026nesys,
   title   = {Neuro-Symbolic Synergy for Interactive World Modeling},
   author  = {Zhao, Hongyu and Zhou, Siyu and Yang, Haolin and Qin, Zengyi and Zhou, Tianyi},
-  journal = {arXiv preprint arXiv:2602.10480},
+  booktitle = {Conference on Language Modeling (COLM)},
   year    = {2026}
 }
 ```

@@ -9,7 +9,7 @@ tqdm
 umap-learn
 
 # Neural evaluation dependencies (GPU recommended)
+accelerate
 torch
 transformers
-peft
-
+peft>=0.15.0
